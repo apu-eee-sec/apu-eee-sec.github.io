@@ -27,6 +27,11 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
 
+
+	<!--Google Font-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="skill_bar_style.css">
+
         <!--========TailwindCSS===== -->
         <script src="https://cdn.tailwindcss.com"></script>
         <!--========TypedJS===== -->
@@ -145,7 +150,15 @@
                 <!-- Skill 1 -->
                 <div class="skill-box reveal">
                     <img src="./img/logos/python.png" alt="Python">
-                    <p>Python</p>
+                    <div class="skills">
+                      <div class="details">
+                        <span>Python</span>
+                        <p><span>60%</span></p>
+                     </div>
+                     <div class="bar">
+                       <div class="progress"></div>
+                     </div>
+                   </div>
                 </div>
 
                 <!-- skill 2 -->
@@ -352,6 +365,16 @@
 
         <!--========Scripts===== -->
         <script src="./files/script.js"></script>
+
+	<script>
+        // Select all skill bars
+        document.querySelectorAll('.skills').forEach(skill => {
+            // Get the percentage from the span
+            const percentage = skill.querySelector('.details span:last-child').innerText;
+            // Set the width of the progress bar dynamically
+            skill.querySelector('.progress').style.width = percentage;
+        });
+       </script>
 
     </body>  
   </html>
