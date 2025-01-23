@@ -65,7 +65,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
+  // Handle certificate clicks
+  slides.forEach((slide) => {
+    const certificateLink = slide.querySelector(".certificate-link")
+    const certificateImage = slide.querySelector(".certificate-image")
+
+    if (certificateLink) {
+      certificateLink.addEventListener("click", (e) => {
+        // If the slide is not active, prevent navigation and move to this slide
+        if (!slide.classList.contains("active")) {
+          e.preventDefault()
+          moveToSlide(slides.indexOf(slide))
+        }
+      })
+    } else {
+      // For certificates without verification links
+      certificateImage.style.cursor = "default"
+    }
+  })
+
   // Initialize the carousel
   moveToSlide(0)
 })
-
