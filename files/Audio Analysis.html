@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Audio Analysis Project</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	
+	
+<style>
+        :root {
+		    --top-color: #2b2e3b;
+            --primary-color: #3498db;
+            --secondary-color: #ecf0f1;
+            --background-color: #2b2e3b;
+            --text-color: #ffffff;
+            --card-bg-color: rgba(255, 255, 255, 0.1);
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease;
+        }
+		a {
+            text-decoration: none !important;
+        }
+		.logo {
+            font-family: 'Agustina', 'Rubik', sans-serif;
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 1000;
+            letter-spacing: 1px;
+        }
+        @font-face {
+            font-family: 'Agustina';
+            src: url('./Agustina.woff') format('woff');
+        }
+        * {
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: var(--top-color);
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: var(--secondary-color) 3px solid;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            margin: 0;
+            text-align: center;
+            padding-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 4s infinite;
+        }
+        @keyframes shine {
+            0% { transform: translateX(-50%) rotate(45deg); }
+            100% { transform: translateX(150%) rotate(45deg); }
+        }
+        .project-description, .circuit-diagram, .demo-video {
+            background: var(--card-bg-color);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-description:hover, .circuit-diagram:hover, .demo-video:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        @media(max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background:  #081b29;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #theme-toggle:hover {
+            background-color: #081b29;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+</style>
+  </head>
+  <body>
+    <header>
+	  <div class="container">
+		<a href="https://apu-eee-sec.github.io">
+		  <h1 class="logo">Mahbub Hasan Apu</h1>
+		</a>
+	  </div>
+    </header>
+
+    <button id="theme-toggle">Toggle Theme</button>
+
+    <div class="container">
+	  <h1>ESP32 Audio Analysis Project</h1>
+	  <section class="project-description fade-in">
+		<h2>Project Overview</h2>
+		<p>This project utilizes an ESP32 microcontroller and an INMP441 microphone to capture and analyze audio signals in real-time. The results are displayed on an OLED screen, providing instant feedback on various audio parameters.</p>
+		<h3>Key Features:</h3>
+		<ul>
+		  <li>Sound level measurement in decibels</li>
+		  <li>Fundamental frequency detection</li>
+		  <li>Analysis of time period and magnitude</li>
+		  <li>Three-view OLED display controlled by a button</li>
+		</ul>
+		<p>The system is designed for real-time audio analysis, making it versatile for sound monitoring and educational purposes. Users can switch between three views on the OLED display: decibel levels, frequency, and a list of other parameters, providing a comprehensive audio analysis tool.</p>
+	  </section>
+
+	  <section class="circuit-diagram fade-in">
+		<h2>Circuit Diagram & Source Code</h2>
+		<img src="/placeholder.svg?height=400&width=600" alt="Circuit Diagram of ESP32 Audio Analysis Project">
+		<p>The circuit diagram above illustrates the connections between the ESP32, INMP441 microphone, OLED display, and the button for view switching. This setup allows for efficient audio capture and real-time analysis.<br> You can find source code here <a href="sorcelink", target="_blank"><i class='bx bx-link-external'></i></a></p>
+	  </section>
+
+	  <section class="demo-video fade-in">
+		<h2>Project Demo</h2>
+		<div class="video-container">
+		  <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<p>The video above demonstrates the functionality of our ESP32 Audio Analysis project. You can see the real-time analysis of audio signals, including decibel levels, frequency detection, and other parameters displayed on the OLED screen.</p>
+	  </section>
+    </div>
+
+<script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        let isDarkTheme = true;
+
+        themeToggle.addEventListener('click', () => {
+            isDarkTheme = !isDarkTheme;
+            if (isDarkTheme) {
+                body.style.backgroundColor = '#2b2e3b';
+                body.style.color = '#ffffff';
+            } else {
+                body.style.backgroundColor = '#ecf0f1';
+                body.style.color = '#34495e';
+            }
+        });
+
+        // Fade-in animation on scroll
+        const fadeElems = document.querySelectorAll('.fade-in');
+
+        const fadeIn = () => {
+            fadeElems.forEach(elem => {
+                const elemTop = elem.getBoundingClientRect().top;
+                const elemBottom = elem.getBoundingClientRect().bottom;
+                if (elemTop < window.innerHeight && elemBottom > 0) {
+                    elem.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', fadeIn);
+        window.addEventListener('load', fadeIn);
+
+        // Particle animation in header
+        const header = document.querySelector('header');
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.cssText = `
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                top: ${Math.random() * 100}%;
+                left: ${Math.random() * 100}%;
+                animation: float ${5 + Math.random() * 10}s linear infinite;
+            `;
+            header.appendChild(particle);
+        }
+
+        const keyframes = `
+            @keyframes float {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-100px); }
+            }
+        `;
+        const style = document.createElement('style');
+        style.innerHTML = keyframes;
+        document.head.appendChild(style);
+</script>
+  </body>
+</html>
+
+
