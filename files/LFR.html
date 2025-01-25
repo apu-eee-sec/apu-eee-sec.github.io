@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Line Following Robot Competition Journey</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
+	<link rel="stylesheet" href="swiper-bundle.min.css">
+	  <!--main style-->
+<style>
         :root {
             --primary-color: #3498db;
             --secondary-color: #ecf0f1;
@@ -165,89 +167,157 @@
             opacity: 1;
             transform: translateY(0);
         }
-    </style>
-</head>
-<body>
+</style>
+<!--photo gallery style-->
+<style>
+        
+        .photoContainer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5px;
+        }
+        .swiper-container {
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 20px;
+			padding-left: 50px;
+			padding-right: 50px;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+</style>
+  </head>
+  <body>
     <header>
-        <div class="container">
-		  <a class="logo" href="#">
-			<h1 class="logo">Mahbub Hasan Apu</h1>
-		  </a>
-        </div>
+	  <div class="container">
+		<a class="logo" href="##">
+		  <h1 class="logo">Mahbub Hasan Apu</h1>
+		</a>
+	  </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#robot">My Robot</a></li>
-            <li><a href="#competitions">Competitions</a></li>
-            <li><a href="#lessons">Lessons Learned</a></li>
-        </ul>
+	  <ul>
+		<li><a href="#about">About</a></li>
+		<li><a href="#robot">My Robot</a></li>
+		<li><a href="#competitions">Competitions</a></li>
+		<li><a href="#lessons">Lessons Learned</a></li>
+	  </ul>
     </nav>
 
     <div class="container">
 	  <h1>My Line Following Robot Competition Journey</h1>
-        <section id="about" class="fade-in">
-            <h2>About My Journey</h2>
-            <p>Welcome to my line-following robot competition experience! Although I haven't won any prizes, each competition has been an incredible learning opportunity and a chance to push my skills to the limit. Here, I'll share my experiences, the challenges I faced, and the joy I found in participating.</p>
-        </section>
+	  <section id="about" class="fade-in">
+		<h2>About My Journey</h2>
+		<p>Welcome to my line-following robot competition experience! Although I didn’t win most of the competitions, I did achieve 2nd runner-up in one of them, each competition has been an incredible learning opportunity and a chance to push my skills to the limit. Here, I'll share my experiences, the challenges I faced, and the joy I found in participating.</p>
+	  </section>
 
-        <section id="robot" class="robot-specs fade-in">
-            <h2>My Line Following Robot</h2>
-            <img src="/placeholder.svg?height=300&width=400" alt="My Line Following Robot">
-            <h3>Specifications:</h3>
-            <ul>
-                <li>Chassis: 2-wheel car design</li>
-                <li>Microcontroller: Arduino Nano</li>
-                <li>Sensors: Infrared sensors for line detection</li>
-                <li>Motors: DC motors with encoders for precise control</li>
-                <li>Power: Rechargeable LiPo battery</li>
-            </ul>
-            <p>My robot is designed to quickly and accurately follow black lines on various courses. While it may not be the fastest, it's been a reliable companion throughout my competition journey.</p>
-        </section>
-
-        <section id="competitions" class="fade-in">
-            <h2>Competition Experiences</h2>
-            
-            <div class="competition-entry">
-                <h3>Regional Robotics Showdown 2023</h3>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <p>This was my first competition. The course had several sharp turns and a few tricky intersections. My robot struggled with the speed required but managed to complete the course.</p>
+	  <section id="robot" class="robot-specs fade-in">
+		<h2>My Line Following Robot</h2>
+		<div class="photoContainer">
+		  <div class="swiper-container">
+            <div class="swiper-wrapper">
+			  <div class="swiper-slide">
+				<img src="../img/Project/My Robot.JPG" alt="Image 1">
+			  </div>
+			  <div class="swiper-slide">
+				<img src="../img/Project/My Robot 2.JPG" alt="Image 2">
+			  </div>
+			  <div class="swiper-slide">
+				<img src="../img/Project/Technoventue 2.JPG" alt="Image 3">
+			  </div>
+			  <div class="swiper-slide">
+				<img src="../img/Project/Technoventure 3 1.JPG" alt="Image 4">
+			  </div>
+			  <div class="swiper-slide">
+				<img src="../img/Project/Technoventure 3 2.JPG" alt="Image 5">
+			  </div>
+			  <div class="swiper-slide">
+				<img src="../img/Project/Technoventure 3 3.JPG" alt="Image 6">
+			  </div>
+			  <div class="swiper-slide">
+				<img src="../img/Project/Technoventure 3 4.JPG" alt="Image 7">
+			  </div>
+			  <div class="swiper-slide">
+				<img src="../img/Project/Technoventure 3 5.JPG" alt="Image 8">
+			  </div>
+			  <div class="swiper-slide">
+				<img src="../img/Project/Technoventure 3 6.JPG" alt="Image 9">
+			  </div>
+			  <div class="swiper-slide">
+				<img src="../img/Project/Technoventure 3 7.JPG" alt="Image 10">
+			  </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+		  </div>
+		</div>
+		<h3>Specifications:</h3>
+		<ul>
+		  <li>Chassis: 2-wheel car design</li>
+		  <li>Microcontroller: Arduino Nano</li>
+		  <li>Sensors: Infrared sensors array for line detection</li>
+		  <li>Motors: DC motors with motor driver for precise control</li>
+		  <li>Power: Rechargeable LiPo battery</li>
+		</ul>
+		<p>My robot is designed to quickly and accurately follow black lines on various courses. While it may not be the fastest, it's been a reliable companion throughout my competition journey.</p>
+	  </section>
 
-            <div class="competition-entry">
-                <h3>National Line Follower Challenge 2023</h3>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <p>The national competition featured a complex course with multiple path options. While my robot took a longer route, it successfully avoided all obstacles and completed the challenge.</p>
-            </div>
+	  <section id="competitions" class="fade-in">
+		<h2>Competition Experiences</h2>
 
-            <div class="competition-entry">
-                <h3>University Tech Fest 2024</h3>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <p>This competition introduced elevated sections and varying line widths. My robot performed better than previous competitions, showing the improvements I had made to its sensors and control algorithms.</p>
-            </div>
-        </section>
+		<div class="competition-entry">
+		  <h3>Regional Robotics Showdown 2023</h3>
+		  <div class="video-container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		  </div>
+		  <p>This was my first competition. The course had several sharp turns and a few tricky intersections. My robot struggled with the speed required but managed to complete the course.</p>
+		</div>
 
-        <section id="lessons" class="lessons-learned fade-in">
-            <h2>Lessons Learned</h2>
-            <ul>
-                <li>Importance of sensor calibration for different lighting conditions</li>
-                <li>The need for robust error correction in the control algorithm</li>
-                <li>Value of testing on various surface materials before competition</li>
-                <li>Significance of weight distribution for speed and stability</li>
-                <li>The joy of problem-solving and continuous improvement</li>
-            </ul>
-            <p>While I haven't won any prizes yet, each competition has taught me valuable lessons and fueled my passion for robotics. The experience of building, testing, and improving my line-following robot has been incredibly rewarding.</p>
-        </section>
+		<div class="competition-entry">
+		  <h3>National Line Follower Challenge 2023</h3>
+		  <div class="video-container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		  </div>
+		  <p>The national competition featured a complex course with multiple path options. While my robot took a longer route, it successfully avoided all obstacles and completed the challenge.</p>
+		</div>
+
+		<div class="competition-entry">
+		  <h3>University Tech Fest 2024</h3>
+		  <div class="video-container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		  </div>
+		  <p>This competition introduced elevated sections and varying line widths. My robot performed better than previous competitions, showing the improvements I had made to its sensors and control algorithms.</p>
+		</div>
+	  </section>
+
+	  <section id="lessons" class="lessons-learned fade-in">
+		<h2>Lessons Learned</h2>
+		<ul>
+		  <li>Importance of sensor calibration for different lighting conditions</li>
+		  <li>The need for robust error correction in the control algorithm</li>
+		  <li>Value of testing on various surface materials before competition</li>
+		  <li>Significance of weight distribution for speed and stability</li>
+		  <li>The joy of problem-solving and continuous improvement</li>
+		</ul>
+		<p>While I haven't won any prizes yet, each competition has taught me valuable lessons and fueled my passion for robotics. The experience of building, testing, and improving my line-following robot has been incredibly rewarding.</p>
+	  </section>
     </div>
 
-    <script>
+<script>
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -294,9 +364,9 @@
                 }
             });
         });
-    </script>
-	
-	<script>
+</script>
+
+<script>
         // Particle animation in header
         const header = document.querySelector('header');
         const particleCount = 150;
@@ -327,7 +397,34 @@
         style.innerHTML = keyframes;
         document.head.appendChild(style);
 </script>
-  <script src="link.js"></script>
-</body>
+	<script src="link.js"></script>
+	<!--photo gallery js-->
+	<script src="swiper-bundle.min.js"></script>
+<script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+</script>
+  </body>
 </html>
-
