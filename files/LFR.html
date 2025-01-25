@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Line Following Robot Competition Journey</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #ecf0f1;
+            --background-color: #2b2e3b;
+            --text-color: #ffffff;
+            --card-bg-color: rgba(255, 255, 255, 0.1);
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease;
+        }
+		a {
+            text-decoration: none !important;
+        }
+		.logo {
+            font-family: 'Agustina', 'Rubik', sans-serif;
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 1000;
+            letter-spacing: 1px;
+        }
+        @font-face {
+            font-family: 'Agustina';
+            src: url('./Agustina.woff') format('woff');
+        }
+        * {
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: var(--top-color);
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: var(--secondary-color) 3px solid;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            margin: 0;
+            text-align: center;
+            padding-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 4s infinite;
+        }
+		@keyframes shine {
+            0% { transform: translateX(-50%) rotate(45deg); }
+            100% { transform: translateX(150%) rotate(45deg); }
+        }
+        nav {
+            background: var(--card-bg-color);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        .competition-entry, .robot-specs, .lessons-learned {
+            background: var(--card-bg-color);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .competition-entry:hover, .robot-specs:hover, .lessons-learned:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        @media(max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+		  <a class="logo" href="#">
+			<h1 class="logo">Mahbub Hasan Apu</h1>
+		  </a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#robot">My Robot</a></li>
+            <li><a href="#competitions">Competitions</a></li>
+            <li><a href="#lessons">Lessons Learned</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+	  <h1>My Line Following Robot Competition Journey</h1>
+        <section id="about" class="fade-in">
+            <h2>About My Journey</h2>
+            <p>Welcome to my line-following robot competition experience! Although I haven't won any prizes, each competition has been an incredible learning opportunity and a chance to push my skills to the limit. Here, I'll share my experiences, the challenges I faced, and the joy I found in participating.</p>
+        </section>
+
+        <section id="robot" class="robot-specs fade-in">
+            <h2>My Line Following Robot</h2>
+            <img src="/placeholder.svg?height=300&width=400" alt="My Line Following Robot">
+            <h3>Specifications:</h3>
+            <ul>
+                <li>Chassis: 2-wheel car design</li>
+                <li>Microcontroller: Arduino Nano</li>
+                <li>Sensors: Infrared sensors for line detection</li>
+                <li>Motors: DC motors with encoders for precise control</li>
+                <li>Power: Rechargeable LiPo battery</li>
+            </ul>
+            <p>My robot is designed to quickly and accurately follow black lines on various courses. While it may not be the fastest, it's been a reliable companion throughout my competition journey.</p>
+        </section>
+
+        <section id="competitions" class="fade-in">
+            <h2>Competition Experiences</h2>
+            
+            <div class="competition-entry">
+                <h3>Regional Robotics Showdown 2023</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <p>This was my first competition. The course had several sharp turns and a few tricky intersections. My robot struggled with the speed required but managed to complete the course.</p>
+            </div>
+
+            <div class="competition-entry">
+                <h3>National Line Follower Challenge 2023</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <p>The national competition featured a complex course with multiple path options. While my robot took a longer route, it successfully avoided all obstacles and completed the challenge.</p>
+            </div>
+
+            <div class="competition-entry">
+                <h3>University Tech Fest 2024</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <p>This competition introduced elevated sections and varying line widths. My robot performed better than previous competitions, showing the improvements I had made to its sensors and control algorithms.</p>
+            </div>
+        </section>
+
+        <section id="lessons" class="lessons-learned fade-in">
+            <h2>Lessons Learned</h2>
+            <ul>
+                <li>Importance of sensor calibration for different lighting conditions</li>
+                <li>The need for robust error correction in the control algorithm</li>
+                <li>Value of testing on various surface materials before competition</li>
+                <li>Significance of weight distribution for speed and stability</li>
+                <li>The joy of problem-solving and continuous improvement</li>
+            </ul>
+            <p>While I haven't won any prizes yet, each competition has taught me valuable lessons and fueled my passion for robotics. The experience of building, testing, and improving my line-following robot has been incredibly rewarding.</p>
+        </section>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in animation on scroll
+        const fadeElems = document.querySelectorAll('.fade-in');
+
+        const fadeIn = () => {
+            fadeElems.forEach(elem => {
+                const elemTop = elem.getBoundingClientRect().top;
+                const elemBottom = elem.getBoundingClientRect().bottom;
+                if (elemTop < window.innerHeight && elemBottom > 0) {
+                    elem.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', fadeIn);
+        window.addEventListener('load', fadeIn);
+
+        // Highlight active navigation item
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+	
+	<script>
+        // Particle animation in header
+        const header = document.querySelector('header');
+        const particleCount = 150;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.cssText = `
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                top: ${Math.random() * 100}%;
+                left: ${Math.random() * 100}%;
+                animation: float ${5 + Math.random() * 10}s linear infinite;
+            `;
+            header.appendChild(particle);
+        }
+
+        const keyframes = `
+            @keyframes float {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-100px); }
+            }
+        `;
+        const style = document.createElement('style');
+        style.innerHTML = keyframes;
+        document.head.appendChild(style);
+</script>
+  <script src="link.js"></script>
+</body>
+</html>
+
