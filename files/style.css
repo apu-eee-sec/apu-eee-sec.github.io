@@ -213,14 +213,14 @@ body {
     height: auto;
     max-width: 492px;
     max-height: 492px;
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
 }
 @keyframes float {
   0%, 100% {
     transform: translateY(0); /* Default position */
   }
   50% {
-    transform: translateY(-10px); /* Move up */
+    transform: translateY(-15px); /* Move up */
   }
 }
 
