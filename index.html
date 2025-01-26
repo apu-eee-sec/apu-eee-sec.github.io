@@ -184,7 +184,7 @@
             <h1 class="subtitle reveal">My <span>Skills</span></h1>
             <div class="skills-container">
                 <!-- Skill 1 -->
-                <div class="skill-box reveal">
+                <div class="skill-box reveal" data-skill="Arduino" data-level="4">
                     <img src="./img/logos/Arduino.png" alt="Arduino">
                     <div class="skills">
                       <div class="details">
@@ -254,7 +254,7 @@
                 </div>
 
 		<!-- Skill 6 -->
-                <div class="skill-box reveal">
+                <div class="skill-box reveal" data-skill="Edge Impulse" data-level="3">
                     <img src="./img/logos/Edge Impulse.png" alt="Edge Impulse">
                     <div class="skills">
                       <div class="details">
@@ -396,6 +396,13 @@
                 </div>
 
             </div>
+	    <div class="hint-message" id="hintMessage">
+		<div class="hint-content">
+		  <h3 id="skillName"></h3>
+		  <div id="starRating"></div>
+		  <p id="skillLevel"></p>
+		</div>
+	    </div>
         </section>
 
 	<!--========================Certificate============================-->
