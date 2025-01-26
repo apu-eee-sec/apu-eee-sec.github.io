@@ -1,0 +1,54 @@
+.hint-message {
+  position: fixed;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.hint-message.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hint-content {
+  text-align: center;
+}
+
+.hint-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#starRating {
+  font-size: 24px;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+#skillLevel {
+  margin: 0;
+  font-style: italic;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.skill-box:hover {
+  animation: pulse 0.5s infinite;
+}
