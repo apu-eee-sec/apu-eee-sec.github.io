@@ -12,7 +12,7 @@ img {
 .carousel {
   position: relative;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .carousel-track-container {
