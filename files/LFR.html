@@ -210,10 +210,10 @@
 
     <nav>
 	  <ul>
-		<li><a href="##about">About</a></li>
-		<li><a href="##robot">My Robot</a></li>
-		<li><a href="##competitions">Competitions</a></li>
-		<li><a href="##lessons">Lessons Learned</a></li>
+		<li><a class="nav" href="#about">About</a></li>
+		<li><a class="nav" href="#robot">My Robot</a></li>
+		<li><a class="nav" href="#competitions">Competitions</a></li>
+		<li><a class="nav" href="#lessons">Lessons Learned</a></li>
 	  </ul>
     </nav>
 
@@ -319,7 +319,7 @@
 
 <script>
         // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="##"]').forEach(anchor => {
+        document.querySelectorAll('nav').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
