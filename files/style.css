@@ -553,6 +553,7 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     align-items: center;
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .skill-box img {
