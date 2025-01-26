@@ -85,7 +85,7 @@ h2{
     box-shadow: 0 0 5px rgba(28,151,252,0.6);
 }
 #html-bar{
-    animation: html-fill 2s forwards;
+    animation: html-fill 5s forwards;
 }
 @keyframes html-fill{
     100%{
@@ -93,7 +93,7 @@ h2{
     }
 }
 #css-bar{
-    animation: css-fill 2s forwards;
+    animation: css-fill 5s forwards;
 }
 @keyframes css-fill{
     100%{
@@ -101,7 +101,7 @@ h2{
     }
 }
 #js-bar{
-    animation: js-fill 2s forwards;
+    animation: js-fill 5s forwards;
 }
 @keyframes js-fill {
     100%{
@@ -109,7 +109,7 @@ h2{
     }
 }
 #jQuery-bar{
-    animation: jQuery-fill 2s forwards;
+    animation: jQuery-fill 5s forwards;
 }
 @keyframes jQuery-fill{
     100%{
