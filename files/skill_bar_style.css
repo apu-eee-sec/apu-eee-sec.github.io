@@ -116,3 +116,10 @@ h2{
         width: 68%;
     }
 }
+.bar .progress {
+    transition: width 8s cubic-bezier(0.1, 0.42, 0.85, 0.91);
+}
+@keyframes fillAnimation {
+    0% { width: 0; }
+    100% { width: var(--progress); }
+}
